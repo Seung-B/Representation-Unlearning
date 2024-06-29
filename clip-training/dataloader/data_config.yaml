@@ -1,0 +1,10 @@
+#ms-coco
+#train_img_dir : 'data/mscoco/train2017'
+#train_annotation_file : 'data/mscoco/annotations/captions_train2017.json'
+
+#cc3m (2m)
+train_img_dir : '/data/CC3Mdata/images'
+train_annotation_file : '/data/CC3Mdata/train.csv'
+
+
+unlearn_object : 'cat'
