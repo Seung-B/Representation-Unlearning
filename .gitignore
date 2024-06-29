@@ -1,3 +1,4 @@
 clip-training/saved_model
 clip-training/saved_checkpoints
 clip-training/data
+!clip-training/data/bpe_simple_vocab_16e6.txt.gz
