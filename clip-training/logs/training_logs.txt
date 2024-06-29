@@ -423,3 +423,14 @@
 2024-04-26 17:42:24,351 CLIP_COCO_TRAIN INFO:   warmup steps = 1568
 2024-04-26 17:47:18,310 CLIP_COCO_TRAIN INFO: Epoch: 0, global_step: 50, lr: 0.000016, loss: 6.0885 (6.2016)
 2024-04-26 17:50:49,042 CLIP_COCO_TRAIN INFO: Epoch: 0, global_step: 100, lr: 0.000032, loss: 5.6718 (6.0125)
+2024-06-29 18:47:29,509 CLIP_CC3M_TRAIN INFO: Training/evaluation parameters {'per_gpu_train_batch_size': 128, 'per_gpu_eval_batch_size': 128, 'n_gpu': 4, 'num_workers': 32, 'num_train_epochs': 50, 'gradient_accumulation_steps': 4, 'logging_steps': 50, 'save_steps': 10000, 'saved_checkpoints': 'saved_checkpoints', 'logs': 'logs', 'optimizer': {'params': {'eps': 1e-08, 'lr': 0.0005, 'weight_decay': 0.1}, 'type': 'AdamW'}}
+2024-06-29 18:48:38,622 CLIP_CC3M_TRAIN INFO: Training/evaluation parameters {'per_gpu_train_batch_size': 128, 'per_gpu_eval_batch_size': 128, 'n_gpu': 4, 'num_workers': 32, 'num_train_epochs': 50, 'gradient_accumulation_steps': 4, 'logging_steps': 50, 'save_steps': 10000, 'saved_checkpoints': 'saved_checkpoints', 'logs': 'logs', 'optimizer': {'params': {'eps': 1e-08, 'lr': 0.0005, 'weight_decay': 0.1}, 'type': 'AdamW'}}
+2024-06-29 18:49:49,770 CLIP_CC3M_TRAIN INFO: ***** Running training *****
+2024-06-29 18:49:49,771 CLIP_CC3M_TRAIN INFO:   Num examples = 2889855
+2024-06-29 18:49:49,771 CLIP_CC3M_TRAIN INFO:   Num Epochs = 50
+2024-06-29 18:49:49,771 CLIP_CC3M_TRAIN INFO:   Number of GPUs = 4
+2024-06-29 18:49:49,771 CLIP_CC3M_TRAIN INFO:   Batch size per GPU = 128
+2024-06-29 18:49:49,771 CLIP_CC3M_TRAIN INFO:   Total train batch size (w. parallel, & accumulation) = 2048
+2024-06-29 18:49:49,771 CLIP_CC3M_TRAIN INFO:   Gradient Accumulation steps = 4
+2024-06-29 18:49:49,771 CLIP_CC3M_TRAIN INFO:   Total optimization steps = 70550
+2024-06-29 18:49:49,771 CLIP_CC3M_TRAIN INFO:   warmup steps = 14110

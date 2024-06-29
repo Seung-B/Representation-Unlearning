@@ -4,7 +4,7 @@ import numpy as np
 import os
 from omegaconf import OmegaConf
 
-from dataloader.dataset import CLIP_COCO_dataset
+from dataloader.dataset import CLIP_COCO_dataset, CLIP_CC3M_dataset
 from dataloader.data_loaders import get_dataloader
 
 from model.model import CLIP
@@ -59,7 +59,7 @@ def train(config, train_dataset, model):
         logger.info("  warmup steps = %d", num_warmup_steps)
 
 
-    global_step, global_loss, global_acc =0,  0.0, 0.0
+    global_step, global_loss, global_acc = 0, 0.0, 0.0
     model.zero_grad()
 
     for epoch in range(int(config.num_train_epochs)):
@@ -165,6 +165,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--train_img_dir", default=None, type=str, required=False, help="path of directory containing COCO training images")
     parser.add_argument("--train_annotation_file", default=None, type=str, required=False, help="path of COCO annotation file")
+    parser.add_argument("--dataset", default='CC3M', type=str, required=False)
+    parser.add_argument("--retrain", action='store_true')
     args = parser.parse_args()
 
     data_config = load_config_file(DATA_CONFIG_PATH)
@@ -186,7 +188,7 @@ def main():
     mkdir(path=config.saved_checkpoints)
     mkdir(path=config.logs)
 
-    logger = setup_logger("CLIP_COCO_TRAIN", config.logs, 0, filename = "training_logs.txt")
+    logger = setup_logger(f"CLIP_{args.dataset}_TRAIN", config.logs, 0, filename = "training_logs.txt")
 
     config.device = "cuda" if torch.cuda.is_available() else "cpu"
     config.n_gpu = torch.cuda.device_count() # config.n_gpu 
@@ -204,7 +206,11 @@ def main():
     logger.info(f"Training/evaluation parameters {train_config}")
 
     # getting dataset for training
-    train_dataset = CLIP_COCO_dataset(config, tokenizer)
+    if args.dataset == 'COCO':
+        train_dataset = CLIP_COCO_dataset(config, tokenizer, args)
+    elif args.dataset == 'CC3M':
+        config.RN50.context_length = 104
+        train_dataset = CLIP_CC3M_dataset(config, args)
 
     # Now training
     global_step, avg_loss = train(config, train_dataset, model)
