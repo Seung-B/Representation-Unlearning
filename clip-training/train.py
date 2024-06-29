@@ -209,7 +209,7 @@ def main():
     if args.dataset == 'COCO':
         train_dataset = CLIP_COCO_dataset(config, tokenizer, args)
     elif args.dataset == 'CC3M':
-        model_config.RN50.context_length = 104
+        config.context_length = 104
         train_dataset = CLIP_CC3M_dataset(config, args)
 
     # Now training

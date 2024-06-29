@@ -445,3 +445,23 @@
 2024-06-29 19:05:31,597 CLIP_CC3M_TRAIN INFO:   Gradient Accumulation steps = 4
 2024-06-29 19:05:31,597 CLIP_CC3M_TRAIN INFO:   Total optimization steps = 70950
 2024-06-29 19:05:31,597 CLIP_CC3M_TRAIN INFO:   warmup steps = 14190
+2024-06-29 19:07:05,279 CLIP_CC3M_TRAIN INFO: Training/evaluation parameters {'per_gpu_train_batch_size': 128, 'per_gpu_eval_batch_size': 128, 'n_gpu': 4, 'num_workers': 32, 'num_train_epochs': 50, 'gradient_accumulation_steps': 4, 'logging_steps': 50, 'save_steps': 10000, 'saved_checkpoints': 'saved_checkpoints', 'logs': 'logs', 'optimizer': {'params': {'eps': 1e-08, 'lr': 0.0005, 'weight_decay': 0.1}, 'type': 'AdamW'}}
+2024-06-29 19:08:00,741 CLIP_CC3M_TRAIN INFO: ***** Running training *****
+2024-06-29 19:08:00,742 CLIP_CC3M_TRAIN INFO:   Num examples = 2905954
+2024-06-29 19:08:00,742 CLIP_CC3M_TRAIN INFO:   Num Epochs = 50
+2024-06-29 19:08:00,742 CLIP_CC3M_TRAIN INFO:   Number of GPUs = 4
+2024-06-29 19:08:00,742 CLIP_CC3M_TRAIN INFO:   Batch size per GPU = 128
+2024-06-29 19:08:00,742 CLIP_CC3M_TRAIN INFO:   Total train batch size (w. parallel, & accumulation) = 2048
+2024-06-29 19:08:00,742 CLIP_CC3M_TRAIN INFO:   Gradient Accumulation steps = 4
+2024-06-29 19:08:00,742 CLIP_CC3M_TRAIN INFO:   Total optimization steps = 70950
+2024-06-29 19:08:00,742 CLIP_CC3M_TRAIN INFO:   warmup steps = 14190
+2024-06-29 19:13:42,574 CLIP_CC3M_TRAIN INFO: Training/evaluation parameters {'per_gpu_train_batch_size': 128, 'per_gpu_eval_batch_size': 128, 'n_gpu': 4, 'num_workers': 32, 'num_train_epochs': 50, 'gradient_accumulation_steps': 4, 'logging_steps': 50, 'save_steps': 10000, 'saved_checkpoints': 'saved_checkpoints', 'logs': 'logs', 'optimizer': {'params': {'eps': 1e-08, 'lr': 0.0005, 'weight_decay': 0.1}, 'type': 'AdamW'}}
+2024-06-29 19:14:37,939 CLIP_CC3M_TRAIN INFO: ***** Running training *****
+2024-06-29 19:14:37,939 CLIP_CC3M_TRAIN INFO:   Num examples = 2905954
+2024-06-29 19:14:37,939 CLIP_CC3M_TRAIN INFO:   Num Epochs = 50
+2024-06-29 19:14:37,939 CLIP_CC3M_TRAIN INFO:   Number of GPUs = 4
+2024-06-29 19:14:37,939 CLIP_CC3M_TRAIN INFO:   Batch size per GPU = 128
+2024-06-29 19:14:37,939 CLIP_CC3M_TRAIN INFO:   Total train batch size (w. parallel, & accumulation) = 2048
+2024-06-29 19:14:37,940 CLIP_CC3M_TRAIN INFO:   Gradient Accumulation steps = 4
+2024-06-29 19:14:37,940 CLIP_CC3M_TRAIN INFO:   Total optimization steps = 70950
+2024-06-29 19:14:37,940 CLIP_CC3M_TRAIN INFO:   warmup steps = 14190
