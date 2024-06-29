@@ -4,9 +4,7 @@ This repository contains code to train [CLIP](https://github.com/openai/CLIP) on
 Can be easily modified to train on other multi-modal datasets (OpenImages, Conceptual captions, ...).
 
 ## Requirements
-* Use **python > 3.8.5**. Conda recommended : [https://docs.anaconda.com/anaconda/install/linux/](https://docs.anaconda.com/anaconda/install/linux/)
-
-* Use **pytorch 1.7.0 CUDA 10.2**
+* Use **python 3.8.10**.
 
 * Other requirements from 'requirements.txt'
 
